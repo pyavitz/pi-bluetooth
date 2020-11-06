@@ -1,29 +1,44 @@
-pi-bluetooth (0.1.13ubuntu6) groovy; urgency=medium
+pi-bluetooth (0.1.13ubuntu6) disco; urgency=medium
 
-  * d/control: Removed the need for ubuntu firmware depemds. 
+  * d/control: switch from arch: all to arch: armhf arm64 since even though
+    we're just shipping configs and scripts, the firmware depdendencies are
+    only available on those two arches.
 
- -- c0rnelius Fri, 06 Nov 2020 07:05:00 +0100
- 
-pi-bluetooth (0.1.13) buster; urgency=medium
+ -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@ubuntu.com>  Mon, 15 Apr 2019 16:48:28 +0100
 
-  [ Phil Elwell ]
-  * bthelper: Force reinitialisation to allow Secure Simple Pairing
+pi-bluetooth (0.1.10ubuntu5) disco; urgency=medium
 
- -- Serge Schneider <serge@raspberrypi.com>  Tue, 26 May 2020 07:13:54 +0100
+  * d/rules: add dh_systemd_enable calls for both services
 
-pi-bluetooth (0.1.12) buster; urgency=medium
+ -- Dave Jones <dave.jones@canonical.com>  Fri, 12 Apr 2019 15:51:11 +0000
 
-  [ Phil Elwell ]
-  * bthelper: Recognise Pi 4 OUI (#10)
+pi-bluetooth (0.1.10ubuntu4) disco; urgency=medium
 
- -- Serge Schneider <serge@raspberrypi.org>  Tue, 05 Nov 2019 13:00:15 +0000
+  * d/rules: remove dh_systemd_enable call and let default handling include
+    the bthelper@.service
 
-pi-bluetooth (0.1.11) buster; urgency=medium
+ -- Dave Jones <dave.jones@canonical.com>  Fri, 12 Apr 2019 15:31:23 +0000
 
-  * Don't override the BT address on Pi 4
-  * Update control file for Buster
+pi-bluetooth (0.1.10ubuntu3) disco; urgency=medium
 
- -- Serge Schneider <serge@raspberrypi.org>  Tue, 18 Jun 2019 12:04:46 +0100
+  * d/rules: removed redundant dh_installinit calls
+
+ -- Dave Jones <dave.jones@canonical.com>  Fri, 12 Apr 2019 14:56:03 +0000
+
+pi-bluetooth (0.1.10ubuntu2) disco; urgency=medium
+
+  * Updated d/copyright to include Canonical Ltd.
+
+ -- Dave Jones <dave.jones@canonical.com>  Fri, 12 Apr 2019 13:56:52 +0000
+
+pi-bluetooth (0.1.10ubuntu1) disco; urgency=medium
+
+  * Fixes LP: #1824338
+  * Consolidate all udev rules for bluetooth in one package
+  * d/control: changed dependency on raspberrypi-sys-mods to
+    linux-firmware-raspi2
+
+ -- Dave Jones <dave.jones@canonical.com>  Thu, 11 Apr 2019 11:34:02 +0000
 
 pi-bluetooth (0.1.10) stretch; urgency=medium
 
