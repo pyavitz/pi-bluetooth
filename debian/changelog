@@ -1,4 +1,4 @@
-pi-bluetooth (0.1.20ubuntu13) disco; urgency=medium
+pi-bluetooth (0.1.20ubuntu13) groovy; urgency=medium
 
   * d/control: switch from arch: all to arch: armhf arm64 since even though
     we're just shipping configs and scripts, the firmware depdendencies are
