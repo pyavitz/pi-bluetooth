@@ -1,3 +1,58 @@
+pi-bluetooth (0.1.19) bullseye; urgency=medium
+
+  [ Phil Elwell ]
+  * Add AA:AA:AA:AA:AA:AA as an "unprogrammed" address
+
+  [ Serge Schneider ]
+  * hciuart: change WantedBy to dev-serial1.device
+
+ -- Serge Schneider <serge@raspberrypi.com>  Wed, 13 Apr 2022 14:34:48 +0100
+
+pi-bluetooth (0.1.18) buster; urgency=medium
+
+  * Do not start hciuart service on install or upgrade
+
+ -- Serge Schneider <serge@raspberrypi.com>  Fri, 10 Sep 2021 16:33:21 +0100
+
+pi-bluetooth (0.1.17) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * Another systemd service adjustment
+
+ -- Serge Schneider <serge@raspberrypi.com>  Fri, 21 May 2021 15:36:01 +0100
+
+pi-bluetooth (0.1.16) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Detect unprogrammed devices instead
+  * Multiple fixes
+
+  [ Dave Jones ]
+  * Widen match for CM4 compatibility
+
+  [ Petar Obradović ]
+  * Change service unit type to "oneshot" (#17)
+
+  [ Cameron Miller ]
+  * Fixes RPI-Distro/pi-bluetooth#18
+
+ -- Serge Schneider <serge@raspberrypi.com>  Fri, 14 May 2021 11:55:01 +0100
+
+pi-bluetooth (0.1.15) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Change BT address with hcitool instead
+  * bthelper: FIX: Only run for onboard BT modems
+
+ -- Serge Schneider <serge@raspberrypi.com>  Wed, 19 Aug 2020 15:45:46 +0100
+
+pi-bluetooth (0.1.14) buster; urgency=medium
+
+  [ Phil Elwell ]
+  * bthelper: Add the ability to set the Pi BDADDR
+
+ -- Serge Schneider <serge@raspberrypi.com>  Wed, 29 Jul 2020 09:24:14 +0100
+
 pi-bluetooth (0.1.13) buster; urgency=medium
 
   [ Phil Elwell ]
