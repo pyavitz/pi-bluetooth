@@ -6,7 +6,7 @@ HCIATTACH=`command -v hciattach`
 UART0=`cat /proc/device-tree/aliases/uart0`
 SERIAL1=`cat /proc/device-tree/aliases/serial1`
 
-if [[ "$BOARD" == "bcm2711" || "$BOARD" == "bcm2712" || "$BOARD" == "raspberrypi4" || "$BOARD" == "raspberrypi5" ]]; then
+if [[ "$BOARD" =~ ^(bcm2711|bcm2711v7|bcm2712)$ ]]; then
 	BDADDR=
 else
 	SERIAL=`cat /proc/device-tree/serial-number | cut -c9-`
